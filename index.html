@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME - LIV3</title>
+
+    <!-- LINKING STYLESHEET -->
+    <link rel="stylesheet" href="./style/style.css">
+
+    <!-- IMPORTING MATERIAL ICONS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- IMPORTING ROBOTO FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- LINKING AOS STYLESHEET -->
+    <!-- ONLY HAS CSS ANIMATIONS/TRANSITIONS WONT INTERFERE WITH ANYTHING ELSE -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- IMPORTING BARBA -->
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="https://unpkg.com/@barba/css"></script>
+    <script src="https://unpkg.com/@barba/prefetch"></script>
+    <!-- IMPORTING AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- IMPORTING POLYFILL FOR EXTRA SUPPORT -->
+    <script crossorigin="anonymous"
+        src="https://polyfill.io/v3/polyfill.min.js?features=default%2CArray.prototype.find%2CIntersectionObserver">
+    </script>
+</head>
+
+<body data-barba="wrapper" class="loading">
+    <span class="material-icons nav-button">menu</span>
+    <nav class="nav" style="width: 0px;">
+        <ul class="nav-list">
+            <li><span class="material-icons">home</span>&nbsp;<a href="#" class="nav-item">HOME</a></li>
+            <li><span class="material-icons">cloud_download</span>&nbsp;<a href="./downloads.html"
+                    class="nav-item">DOWNLOADS</a></li>
+            <li><span class="material-icons">inbox</span>&nbsp;<a href="./contact.html" class="nav-item">CONTACT</a>
+            </li>
+            <li><span class="material-icons">question_answer</span>&nbsp;<a href="./faq.html" class="nav-item">FAQ</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main data-barba="container" data-barba-namespace="index" class="index">
+        <a class="yt-button" href="https://www.youtube.com/channel/UCtbivXmEZrr6aKtx3CjMMVg" rel="no-opener no-referrer"
+            target="_blank">
+            <span class="material-icons">play_arrow</span>
+        </a>
+        <div class="text">
+            <h1>LIV3</h1>
+            <br>
+            <h2>Launchpad Youtuber</h2>
+        </div>
+    </main>
+</body>
+<!-- IMPORTING INIT SCRIPT -->
+<script src="script/app.js"></script>
+
+
+</html>
