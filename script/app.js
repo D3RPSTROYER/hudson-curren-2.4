@@ -59,6 +59,7 @@ function resetNav() {
     navOpen = false;
 }
 
+// this looks neat now, yay
 function init() {
     prepNavButtons();
     makeNavLookNice();
