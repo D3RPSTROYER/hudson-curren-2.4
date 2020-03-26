@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-$easing: cubic-beizer(0.4, 0, 0.2, 1);
 $navColour : #222;
 
 body {
@@ -20,6 +19,12 @@ body {
     background-size: 100%;
     background-repeat: repeat-y;
     background-attachment: fixed;
+    user-select: none;
+    -moz-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    -moz-user-select: none;
 }
 
 nav {
@@ -55,9 +60,7 @@ nav {
 }
 
 main {
-    // Problem, the gif is very very hard to see, it looks like black
-    // damn
-
+    min-height: 100vh;
     background-image: url("../img/index-bg.gif");
     background-size: contain;
     background-repeat: repeat-y;
@@ -104,7 +107,6 @@ main {
         .text {
             text-align: center;
             margin: auto;
-            transform: translateY(-2.5em);
 
             h1 {
                 font-size: 15vh;
@@ -149,110 +151,4 @@ footer {
 
 .shadow {
     box-shadow: 10px 0px 5px 5px $navColour;
-}
-
-.loading {
-    display: none;
-    opacity: 0;
-}
-
-// BARBA STYLES DO NOT TOUCH
-.barba-enter-active {
-    transition: 250ms $easing;
-    opacity: 1;
-    transform: translateY(0px);
-}
-
-.barba-leave-active {
-    transition: 150ms $easing;
-    opacity: 0;
-    transform: translateY(5px);
-}
-
-.barba-leave,
-.barba-enter-to {
-    opacity: 1;
-    transform: translateY(0px);
-}
-
-.barba-enter,
-.barba-leave-to {
-    opacity: 0;
-    transform: translateY(5px);
-}
-
-// VARS FOR CUSTOME FADE
-$init-pos: 20px;
-
-// CUSTOM AOS FADES
-[data-aos="c-fade-up"] {
-    opacity: 0;
-    transition-property: transform, opacity;
-    transition-timing-function: $easing;
-
-    &.aos-animate {
-        opacity: 1;
-    }
-
-    @media screen and (min-width:768px) {
-        transform: translateY($init-pos);
-
-        &.aos-animate {
-            transform: translateY(0px);
-        }
-    }
-}
-
-[data-aos="c-fade-left"] {
-    opacity: 0;
-    transition-property: transform, opacity;
-    transition-timing-function: $easing;
-
-    &.aos-animate {
-        opacity: 1;
-    }
-
-    @media screen and (min-width:768px) {
-        transform: translateX(-$init-pos);
-
-        &.aos-animate {
-            transform: translateX(0px);
-        }
-    }
-}
-
-[data-aos="c-fade-right"] {
-    opacity: 0;
-    transition-property: transform, opacity;
-    transition-timing-function: $easing;
-
-    &.aos-animate {
-        opacity: 1;
-    }
-
-    @media screen and (min-width:768px) {
-        transform: translateX($init-pos);
-
-        &.aos-animate {
-            transform: translateX(0px);
-        }
-    }
-}
-
-[data-aos="c-fade-down"] {
-    opacity: 0;
-    transition-property: transform, opacity;
-    transition-timing-function: $easing;
-
-    &.aos-animate {
-        opacity: 1;
-    }
-
-    @media screen and (min-width:768px) {
-        transform: translateY(-$init-pos);
-
-        &.aos-animate {
-            transform: translateX(0px);
-        }
-    }
 }
