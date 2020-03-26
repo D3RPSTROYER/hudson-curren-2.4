@@ -56,6 +56,13 @@ nav .nav-list li a {
   text-decoration: none;
 }
 
+main {
+  background-image: url("../img/index-bg.gif");
+  background-size: contain;
+  background-repeat: repeat-y;
+  background-position: center;
+}
+
 main.index {
   height: 100vh;
   overflow: hidden;

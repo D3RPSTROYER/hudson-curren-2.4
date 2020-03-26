@@ -55,6 +55,13 @@ nav {
 }
 
 main {
+    // Problem, the gif is very very hard to see, it looks like black
+    // damn
+
+    background-image: url("../img/index-bg.gif");
+    background-size: contain;
+    background-repeat: repeat-y;
+    background-position: center;
 
     &.index {
         height: 100vh;
