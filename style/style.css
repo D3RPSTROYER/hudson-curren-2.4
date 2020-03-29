@@ -69,6 +69,120 @@ main {
   background-size: contain;
   background-repeat: repeat-y;
   background-position: center;
+  padding: 50px 0;
+}
+
+@media screen and (min-width: 900px) {
+  main {
+    padding: 50px 100px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  main {
+    padding: 50px 300px;
+  }
+}
+
+main.downloads .title {
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 45vh;
+}
+
+main.downloads .title .hero {
+  font-weight: lighter;
+  font-size: 96px;
+  letter-spacing: -1.5px;
+}
+
+main.downloads .title .subhero {
+  font-size: 34px;
+  letter-spacing: 0.25px;
+}
+
+main.downloads .content {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 10px;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media screen and (max-width: 1100px) {
+  main.downloads .content {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main.downloads .content {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+main.downloads .content .gallery {
+  border: 1px solid #00000000;
+  border-radius: 0.5em;
+  float: left;
+  width: 100%;
+  overflow: hidden;
+  -webkit-transition: border-radius 100ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-radius 100ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+main.downloads .content .gallery:hover {
+  border-radius: 0.25em;
+}
+
+main.downloads .content .gallery .banner {
+  width: 100%;
+  height: 300px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+main.downloads .content .gallery .desc {
+  padding: 15px;
+  height: 75px;
+  width: 100%;
+  font-size: 14px;
+  letter-spacing: 0.25px;
+  font-weight: normal;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  background-color: #222;
+}
+
+main.downloads .content .gallery .desc a {
+  color: white;
+}
+
+main.downloads .content .gallery .desc .title {
+  text-align: center;
+  width: 100%;
 }
 
 main.index {
@@ -114,15 +228,6 @@ main.index .yt-button span {
   text-align: center;
 }
 
-main.index .bg-vid {
-  width: 100%;
-  min-height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-
 main.index .text {
   text-align: center;
   margin: auto;
@@ -132,6 +237,23 @@ main.index .text h1 {
   font-size: 15vh;
   -webkit-filter: drop-shadow(0 0 2.5em black);
           filter: drop-shadow(0 0 2.5em black);
+}
+
+footer {
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  width: 100vw;
+  background-color: #222;
 }
 
 .material-icons {

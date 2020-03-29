@@ -65,8 +65,9 @@ function init() {
     makeNavLookNice();
     resetNav();
     AOS.init({
-        'easing': 'ease-out-quint',
-        'duration': '300ms'
+        easing: 'ease-out-quint',
+        duration: 250,
+        startEvent: 'DOMContentLoaded',
     });
     document.body.classList.remove("loading");
 }
