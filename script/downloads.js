@@ -3,10 +3,16 @@ const api = 'https://api.jsonbin.io/b/5e815c50862c46101ac086a6/latest';
 const authKey = '$2b$10$0EaywmQ9k387XxShjAt.ouF7m0YLoSfHcBnMRMlaDHqSnflXwA.yq';
 let delay = 0;
 
-function doAll(api) {
+// JSONBin will be replaced with mySQL in the database 2.3 in term 3/4
+// for now it works better and i can use JS
+// i dont like PHP
+// by making the client do the hard work you save server money and power. 
+// which can be used to server the site faster or accept requests in higher volume
+
+function doAll(api, auth) {
     let xhr = new XMLHttpRequest;
     xhr.open("GET", api)
-    xhr.setRequestHeader('secret-key', authKey);
+    xhr.setRequestHeader('secret-key', auth);
     xhr.send();
 
     xhr.onload = () => {
@@ -18,148 +24,6 @@ function doAll(api) {
         }
     }
 }
-
-// const videos = [
-//     {
-//         name: 'TEST',
-//         image: 'https://via.placeholder.com/300x200',
-//         vidLink: '#',
-//         dlLink: '#',
-//         delay: 0
-//     },
-//     {
-//         name: 'TEST',
-//         image: 'https://via.placeholder.com/300x200',
-//         vidLink: '#',
-//         dlLink: '#',
-//         delay: 50
-//     },
-//     {
-//         name: 'TEST',
-//         image: 'https://via.placeholder.com/300x200',
-//         vidLink: '#',
-//         dlLink: '#',
-//         delay: 100
-//     },
-//     {
-//         name: 'TEST',
-//         image: 'https://via.placeholder.com/300x200',
-//         vidLink: '#',
-//         dlLink: '#',
-//         delay: 150
-//     },
-//     {
-//         name: 'TEST',
-//         image: 'https://via.placeholder.com/300x200',
-//         vidLink: '#',
-//         dlLink: '#',
-//         delay: 200
-//     },
-//     {
-//         name: 'TEST',
-//         image: 'https://via.placeholder.com/300x200',
-//         vidLink: '#',
-//         dlLink: '#',
-//         delay: 250
-//     },
-//     {
-//         name: 'TEST',
-//         image: 'https://via.placeholder.com/300x200',
-//         vidLink: '#',
-//         dlLink: '#',
-//         delay: 0
-//     },
-//     {
-//         name: 'TEST',
-//         image: 'https://via.placeholder.com/300x200',
-//         vidLink: '#',
-//         dlLink: '#',
-//         delay: 50
-//     }, {
-//         name: 'TEST',
-//         image: 'https://via.placeholder.com/300x200',
-//         vidLink: '#',
-//         dlLink: '#',
-//         delay: 100
-//     },
-//     {
-//         name: 'TEST',
-//         image: 'https://via.placeholder.com/300x200',
-//         vidLink: '#',
-//         dlLink: '#',
-//         delay: 0
-//     },
-//     {
-//         name: 'TEST',
-//         image: 'https://via.placeholder.com/300x200',
-//         vidLink: '#',
-//         dlLink: '#',
-//         delay: 50
-//     }, {
-//         name: 'TEST',
-//         image: 'https://via.placeholder.com/300x200',
-//         vidLink: '#',
-//         dlLink: '#',
-//         delay: 100
-//     }, {
-//         name: 'TEST',
-//         image: 'https://via.placeholder.com/300x200',
-//         vidLink: '#',
-//         dlLink: '#',
-//         delay: 0
-//     },
-//     {
-//         name: 'TEST',
-//         image: 'https://via.placeholder.com/300x200',
-//         vidLink: '#',
-//         dlLink: '#',
-//         delay: 50
-//     }, {
-//         name: 'TEST',
-//         image: 'https://via.placeholder.com/300x200',
-//         vidLink: '#',
-//         dlLink: '#',
-//         delay: 100
-//     }, {
-//         name: 'TEST',
-//         image: 'https://via.placeholder.com/300x200',
-//         vidLink: '#',
-//         dlLink: '#',
-//         delay: 0
-//     },
-//     {
-//         name: 'TEST',
-//         image: 'https://via.placeholder.com/300x200',
-//         vidLink: '#',
-//         dlLink: '#',
-//         delay: 50
-//     }, {
-//         name: 'TEST',
-//         image: 'https://via.placeholder.com/300x200',
-//         vidLink: '#',
-//         dlLink: '#',
-//         delay: 100
-//     }, {
-//         name: 'TEST',
-//         image: 'https://via.placeholder.com/300x200',
-//         vidLink: '#',
-//         dlLink: '#',
-//         delay: 0
-//     },
-//     {
-//         name: 'TEST',
-//         image: 'https://via.placeholder.com/300x200',
-//         vidLink: '#',
-//         dlLink: '#',
-//         delay: 50
-//     }, {
-//         name: 'TEST',
-//         image: 'https://via.placeholder.com/300x200',
-//         vidLink: '#',
-//         dlLink: '#',
-//         delay: 100
-//     },
-// ]
 
 function makeItem(name, image, vidLink, dlLink, delay) {
 
@@ -187,7 +51,7 @@ function multiItem(array) {
 }
 
 function init() {
-    doAll(api);
+    doAll(api, authKey);
     // multiItem(videos);
     console.log(JSON.stringify(videos));
 }
