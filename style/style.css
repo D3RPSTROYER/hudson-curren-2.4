@@ -91,7 +91,7 @@ main {
 
 @media screen and (min-width: 900px) {
   main {
-    padding: 50px 100px;
+    padding: 50px 10px;
   }
 }
 
@@ -99,6 +99,96 @@ main {
   main {
     padding: 50px 300px;
   }
+}
+
+main.faq .title {
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 45vh;
+}
+
+main.faq .title .hero {
+  font-weight: lighter;
+  font-size: 96px;
+  letter-spacing: -1.5px;
+}
+
+main.faq .title .subhero {
+  font-size: 34px;
+  letter-spacing: 0.25px;
+}
+
+main.faq .content {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 10px;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (max-width: 1100px) {
+  main.faq .content {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+main.faq .content .qa {
+  border: 1px solid #00000000;
+  border-radius: 0.5em;
+  float: left;
+  width: 100%;
+  overflow: hidden;
+}
+
+main.faq .content .qa .q {
+  width: 100%;
+  height: 75px;
+  padding: 5px;
+  background-color: black;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+main.faq .content .qa .a {
+  padding: 15px;
+  height: 200px;
+  width: 100%;
+  font-size: 14px;
+  letter-spacing: 0.25px;
+  font-weight: normal;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  background-color: #222;
+}
+
+main.faq .content .qa .a a {
+  color: white;
+}
+
+main.faq .content .qa .a .title {
+  text-align: center;
+  width: 100%;
 }
 
 main.downloads .title {
@@ -334,130 +424,72 @@ footer a {
   }
 }
 
-.lds-roller {
-  display: inline-block;
-  position: relative;
-  width: 80px;
-  height: 80px;
-}
-
-.lds-roller div {
-  -webkit-animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-          animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-  -webkit-transform-origin: 40px 40px;
-          transform-origin: 40px 40px;
-}
-
-.lds-roller div:after {
-  content: " ";
+#nest1 {
   display: block;
   position: absolute;
-  width: 7px;
-  height: 7px;
+  top: 50%;
+  left: 50%;
+  height: 50px;
+  width: 50px;
+  margin: -25px 0 0 -25px;
+  border: 2px solid transparent;
+  border-top-color: #fff;
   border-radius: 50%;
-  background: #fff;
-  margin: -4px 0 0 -4px;
+  -webkit-animation: spin7 1.5s ease infinite;
+  animation: spin7 1.5s ease infinite;
 }
 
-.lds-roller div:nth-child(1) {
-  -webkit-animation-delay: -0.036s;
-          animation-delay: -0.036s;
+#nest1:before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  bottom: 7px;
+  left: 7px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  border-top-color: #fff;
+  -webkit-animation: spin7 3s linear infinite;
+  animation: spin7 3s linear infinite;
 }
 
-.lds-roller div:nth-child(1):after {
-  top: 63px;
-  left: 63px;
+#nest1:after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  border-top-color: #fff;
+  -webkit-animation: spin7 1.5s ease infinite;
+  animation: spin7 1.5s ease infinite;
 }
 
-.lds-roller div:nth-child(2) {
-  -webkit-animation-delay: -0.072s;
-          animation-delay: -0.072s;
-}
-
-.lds-roller div:nth-child(2):after {
-  top: 68px;
-  left: 56px;
-}
-
-.lds-roller div:nth-child(3) {
-  -webkit-animation-delay: -0.108s;
-          animation-delay: -0.108s;
-}
-
-.lds-roller div:nth-child(3):after {
-  top: 71px;
-  left: 48px;
-}
-
-.lds-roller div:nth-child(4) {
-  -webkit-animation-delay: -0.144s;
-          animation-delay: -0.144s;
-}
-
-.lds-roller div:nth-child(4):after {
-  top: 72px;
-  left: 40px;
-}
-
-.lds-roller div:nth-child(5) {
-  -webkit-animation-delay: -0.18s;
-          animation-delay: -0.18s;
-}
-
-.lds-roller div:nth-child(5):after {
-  top: 71px;
-  left: 32px;
-}
-
-.lds-roller div:nth-child(6) {
-  -webkit-animation-delay: -0.216s;
-          animation-delay: -0.216s;
-}
-
-.lds-roller div:nth-child(6):after {
-  top: 68px;
-  left: 24px;
-}
-
-.lds-roller div:nth-child(7) {
-  -webkit-animation-delay: -0.252s;
-          animation-delay: -0.252s;
-}
-
-.lds-roller div:nth-child(7):after {
-  top: 63px;
-  left: 17px;
-}
-
-.lds-roller div:nth-child(8) {
-  -webkit-animation-delay: -0.288s;
-          animation-delay: -0.288s;
-}
-
-.lds-roller div:nth-child(8):after {
-  top: 56px;
-  left: 12px;
-}
-
-@-webkit-keyframes lds-roller {
-  0% {
+@-webkit-keyframes spin7 {
+  from {
     -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+  to {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
   }
 }
 
-@keyframes lds-roller {
-  0% {
+@keyframes spin7 {
+  from {
     -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+  to {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
   }
 }
 /*# sourceMappingURL=style.css.map */
