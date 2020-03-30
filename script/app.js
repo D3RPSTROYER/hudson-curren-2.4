@@ -1,7 +1,7 @@
 // DEFINING NAV ELEMENT AND NAVWIDTH
 const nav = document.querySelector(".nav");
 const navButton = document.querySelector(".nav-button");
-const navWidth = "20vw";
+const navWidth = "400px";
 const main = document.querySelector("main");
 const navButtons = document.querySelectorAll(".nav-item");
 var navOpen = false;
