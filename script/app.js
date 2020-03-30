@@ -65,7 +65,6 @@ function init() {
     prepNavButtons();
     makeNavLookNice();
     resetNav();
-    document.body.classList.remove("loading");
 }
 
 init();

@@ -27,6 +27,12 @@ body {
   -moz-user-select: none;
 }
 
+@media print {
+  body {
+    display: none;
+  }
+}
+
 nav {
   height: 100vh;
   position: fixed;
@@ -318,5 +324,12 @@ footer a {
 .shadow {
   -webkit-box-shadow: 5px 0px 10px 10px #222;
           box-shadow: 5px 0px 10px 10px #222;
+}
+
+@media (pointer: coarse) {
+  .shadow {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */
