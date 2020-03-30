@@ -48,11 +48,19 @@ nav {
         padding-left: 34px;
 
         li {
-            font-size: 30px;
+            font-size: 24px;
+            align-items: center;
             line-height: 30px;
             margin-bottom: 20px;
 
             a {
+                span {
+                    transform: translateY(4px);
+                    margin-right: 4px;
+                }
+
+                line-height: 30px;
+                vertical-align: middle;
                 margin-left: 0.5em;
                 color: white;
                 text-decoration: none;
