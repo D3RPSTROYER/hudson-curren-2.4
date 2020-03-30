@@ -50,6 +50,7 @@ function toggleNav() {
         nav.style.width = "0px";
         navButton.innerHTML = "menu";
         navOpen = false;
+
     }
 }
 
@@ -64,11 +65,6 @@ function init() {
     prepNavButtons();
     makeNavLookNice();
     resetNav();
-    AOS.init({
-        easing: 'ease-out-quint',
-        duration: 250,
-        startEvent: 'DOMContentLoaded',
-    });
     document.body.classList.remove("loading");
 }
 

@@ -35,10 +35,10 @@ nav {
   left: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
-  -webkit-transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 350ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
-  transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 350ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
-  transition: box-shadow 350ms cubic-bezier(0.4, 0, 0.2, 1) 250ms, width 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: box-shadow 350ms cubic-bezier(0.4, 0, 0.2, 1) 250ms, width 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 350ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  -webkit-transition: width 150ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 350ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  transition: width 150ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 350ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  transition: box-shadow 350ms cubic-bezier(0.4, 0, 0.2, 1) 250ms, width 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 350ms cubic-bezier(0.4, 0, 0.2, 1) 250ms, width 150ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 350ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
   overflow-x: hidden;
   z-index: 1;
 }
@@ -138,12 +138,6 @@ main.downloads .content .gallery {
   float: left;
   width: 100%;
   overflow: hidden;
-  -webkit-transition: border-radius 100ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: border-radius 100ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-main.downloads .content .gallery:hover {
-  border-radius: 0.25em;
 }
 
 main.downloads .content .gallery .banner {
@@ -273,6 +267,17 @@ footer {
       -ms-user-select: none;
           user-select: none;
   line-height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  vertical-align: middle;
   text-align: center;
   color: white;
   padding-left: 10px;

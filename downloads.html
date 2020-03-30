@@ -49,14 +49,19 @@
             </div>
         </div>
         <div class="content">
-            <!-- ALL CINTENT ADDED BY downloads.js -->
+            <!-- ALL CONTENT ADDED BY downloads.js -->
         </div>
     </main>
 </body>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="./script/downloads.js"></script>
-<!-- IMPORTING INIT SCRIPT -->
 <script src="script/app.js"></script>
-
+<script>
+    AOS.init({
+        easing: 'ease-out-quint',
+        duration: 250,
+        startEvent: 'DOMContentLoaded',
+    });
+</script>
+<script src="./script/downloads.js"></script>
 
 </html>
