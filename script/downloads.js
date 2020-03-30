@@ -1,149 +1,165 @@
 const content = document.querySelector('div.content');
+const api = 'https://api.jsonbin.io/b/5e815c50862c46101ac086a6/latest';
+const authKey = '$2b$10$0EaywmQ9k387XxShjAt.ouF7m0YLoSfHcBnMRMlaDHqSnflXwA.yq';
 let delay = 0;
 
-// DELAY PROPERTY STUPID, GOT RID OF IT
+function doAll(api) {
+    let xhr = new XMLHttpRequest;
+    xhr.open("GET", api)
+    xhr.setRequestHeader('secret-key', authKey);
+    xhr.send();
 
-const videos = [
-    {
-        name: 'TEST',
-        image: 'https://via.placeholder.com/300x200',
-        vidLink: '#',
-        dlLink: '#',
-        delay: 0
-    },
-    {
-        name: 'TEST',
-        image: 'https://via.placeholder.com/300x200',
-        vidLink: '#',
-        dlLink: '#',
-        delay: 50
-    },
-    {
-        name: 'TEST',
-        image: 'https://via.placeholder.com/300x200',
-        vidLink: '#',
-        dlLink: '#',
-        delay: 100
-    },
-    {
-        name: 'TEST',
-        image: 'https://via.placeholder.com/300x200',
-        vidLink: '#',
-        dlLink: '#',
-        delay: 150
-    },
-    {
-        name: 'TEST',
-        image: 'https://via.placeholder.com/300x200',
-        vidLink: '#',
-        dlLink: '#',
-        delay: 200
-    },
-    {
-        name: 'TEST',
-        image: 'https://via.placeholder.com/300x200',
-        vidLink: '#',
-        dlLink: '#',
-        delay: 250
-    },
-    {
-        name: 'TEST',
-        image: 'https://via.placeholder.com/300x200',
-        vidLink: '#',
-        dlLink: '#',
-        delay: 0
-    },
-    {
-        name: 'TEST',
-        image: 'https://via.placeholder.com/300x200',
-        vidLink: '#',
-        dlLink: '#',
-        delay: 50
-    }, {
-        name: 'TEST',
-        image: 'https://via.placeholder.com/300x200',
-        vidLink: '#',
-        dlLink: '#',
-        delay: 100
-    },
-    {
-        name: 'TEST',
-        image: 'https://via.placeholder.com/300x200',
-        vidLink: '#',
-        dlLink: '#',
-        delay: 0
-    },
-    {
-        name: 'TEST',
-        image: 'https://via.placeholder.com/300x200',
-        vidLink: '#',
-        dlLink: '#',
-        delay: 50
-    }, {
-        name: 'TEST',
-        image: 'https://via.placeholder.com/300x200',
-        vidLink: '#',
-        dlLink: '#',
-        delay: 100
-    }, {
-        name: 'TEST',
-        image: 'https://via.placeholder.com/300x200',
-        vidLink: '#',
-        dlLink: '#',
-        delay: 0
-    },
-    {
-        name: 'TEST',
-        image: 'https://via.placeholder.com/300x200',
-        vidLink: '#',
-        dlLink: '#',
-        delay: 50
-    }, {
-        name: 'TEST',
-        image: 'https://via.placeholder.com/300x200',
-        vidLink: '#',
-        dlLink: '#',
-        delay: 100
-    }, {
-        name: 'TEST',
-        image: 'https://via.placeholder.com/300x200',
-        vidLink: '#',
-        dlLink: '#',
-        delay: 0
-    },
-    {
-        name: 'TEST',
-        image: 'https://via.placeholder.com/300x200',
-        vidLink: '#',
-        dlLink: '#',
-        delay: 50
-    }, {
-        name: 'TEST',
-        image: 'https://via.placeholder.com/300x200',
-        vidLink: '#',
-        dlLink: '#',
-        delay: 100
-    }, {
-        name: 'TEST',
-        image: 'https://via.placeholder.com/300x200',
-        vidLink: '#',
-        dlLink: '#',
-        delay: 0
-    },
-    {
-        name: 'TEST',
-        image: 'https://via.placeholder.com/300x200',
-        vidLink: '#',
-        dlLink: '#',
-        delay: 50
-    }, {
-        name: 'TEST',
-        image: 'https://via.placeholder.com/300x200',
-        vidLink: '#',
-        dlLink: '#',
-        delay: 100
-    },
-]
+    xhr.onload = () => {
+        if (xhr.status != 200) {
+            console.error(`Error: ${xhr.status}: ${xhr.statusText}`)
+        } else {
+            content.innerHTML = "";
+            multiItem(JSON.parse(xhr.responseText));
+        }
+    }
+}
+
+// const videos = [
+//     {
+//         name: 'TEST',
+//         image: 'https://via.placeholder.com/300x200',
+//         vidLink: '#',
+//         dlLink: '#',
+//         delay: 0
+//     },
+//     {
+//         name: 'TEST',
+//         image: 'https://via.placeholder.com/300x200',
+//         vidLink: '#',
+//         dlLink: '#',
+//         delay: 50
+//     },
+//     {
+//         name: 'TEST',
+//         image: 'https://via.placeholder.com/300x200',
+//         vidLink: '#',
+//         dlLink: '#',
+//         delay: 100
+//     },
+//     {
+//         name: 'TEST',
+//         image: 'https://via.placeholder.com/300x200',
+//         vidLink: '#',
+//         dlLink: '#',
+//         delay: 150
+//     },
+//     {
+//         name: 'TEST',
+//         image: 'https://via.placeholder.com/300x200',
+//         vidLink: '#',
+//         dlLink: '#',
+//         delay: 200
+//     },
+//     {
+//         name: 'TEST',
+//         image: 'https://via.placeholder.com/300x200',
+//         vidLink: '#',
+//         dlLink: '#',
+//         delay: 250
+//     },
+//     {
+//         name: 'TEST',
+//         image: 'https://via.placeholder.com/300x200',
+//         vidLink: '#',
+//         dlLink: '#',
+//         delay: 0
+//     },
+//     {
+//         name: 'TEST',
+//         image: 'https://via.placeholder.com/300x200',
+//         vidLink: '#',
+//         dlLink: '#',
+//         delay: 50
+//     }, {
+//         name: 'TEST',
+//         image: 'https://via.placeholder.com/300x200',
+//         vidLink: '#',
+//         dlLink: '#',
+//         delay: 100
+//     },
+//     {
+//         name: 'TEST',
+//         image: 'https://via.placeholder.com/300x200',
+//         vidLink: '#',
+//         dlLink: '#',
+//         delay: 0
+//     },
+//     {
+//         name: 'TEST',
+//         image: 'https://via.placeholder.com/300x200',
+//         vidLink: '#',
+//         dlLink: '#',
+//         delay: 50
+//     }, {
+//         name: 'TEST',
+//         image: 'https://via.placeholder.com/300x200',
+//         vidLink: '#',
+//         dlLink: '#',
+//         delay: 100
+//     }, {
+//         name: 'TEST',
+//         image: 'https://via.placeholder.com/300x200',
+//         vidLink: '#',
+//         dlLink: '#',
+//         delay: 0
+//     },
+//     {
+//         name: 'TEST',
+//         image: 'https://via.placeholder.com/300x200',
+//         vidLink: '#',
+//         dlLink: '#',
+//         delay: 50
+//     }, {
+//         name: 'TEST',
+//         image: 'https://via.placeholder.com/300x200',
+//         vidLink: '#',
+//         dlLink: '#',
+//         delay: 100
+//     }, {
+//         name: 'TEST',
+//         image: 'https://via.placeholder.com/300x200',
+//         vidLink: '#',
+//         dlLink: '#',
+//         delay: 0
+//     },
+//     {
+//         name: 'TEST',
+//         image: 'https://via.placeholder.com/300x200',
+//         vidLink: '#',
+//         dlLink: '#',
+//         delay: 50
+//     }, {
+//         name: 'TEST',
+//         image: 'https://via.placeholder.com/300x200',
+//         vidLink: '#',
+//         dlLink: '#',
+//         delay: 100
+//     }, {
+//         name: 'TEST',
+//         image: 'https://via.placeholder.com/300x200',
+//         vidLink: '#',
+//         dlLink: '#',
+//         delay: 0
+//     },
+//     {
+//         name: 'TEST',
+//         image: 'https://via.placeholder.com/300x200',
+//         vidLink: '#',
+//         dlLink: '#',
+//         delay: 50
+//     }, {
+//         name: 'TEST',
+//         image: 'https://via.placeholder.com/300x200',
+//         vidLink: '#',
+//         dlLink: '#',
+//         delay: 100
+//     },
+// ]
 
 function makeItem(name, image, vidLink, dlLink, delay) {
 
@@ -171,7 +187,9 @@ function multiItem(array) {
 }
 
 function init() {
-    multiItem(videos);
+    doAll(api);
+    // multiItem(videos);
+    console.log(JSON.stringify(videos));
 }
 
 init()
