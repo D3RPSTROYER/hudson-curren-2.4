@@ -82,7 +82,7 @@ nav .nav-list li a span {
 
 main {
   min-height: 100vh;
-  background-image: url("../img/index-bg.gif");
+  background-image: url("../img/bg.gif");
   background-size: contain;
   background-repeat: repeat-y;
   background-position: center;
@@ -92,12 +92,14 @@ main {
 @media screen and (min-width: 900px) {
   main {
     padding: 50px 10px;
+    background-image: url("../img/mobile-bg.gif");
   }
 }
 
 @media screen and (min-width: 1200px) {
   main {
     padding: 50px 250px;
+    background-image: url("../img/bg.gif");
   }
 }
 
