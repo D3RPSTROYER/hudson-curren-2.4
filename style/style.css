@@ -409,7 +409,9 @@ main.index .text h1 {
 }
 
 main.index .bio {
-  height: 40vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   padding: 50px 50px;
   display: -webkit-box;
   display: -ms-flexbox;
