@@ -35,7 +35,7 @@ function makeItem(name, image, vidLink, dlLink, delay) {
             ${name}
             </div>
                 <div class="links">
-                <a href="${vidLink}">Video</a>&nbsp;|&nbsp;<a href="${dlLink}" download>Download</a>
+                <a href="${vidLink}" target="_blank">Video</a>&nbsp;|&nbsp;<a href="${dlLink}" download>Download</a>
                 </div>
             </div>
         </div>`
