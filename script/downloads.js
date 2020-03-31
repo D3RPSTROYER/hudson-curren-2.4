@@ -51,8 +51,6 @@ function multiItem(array) {
 
 function init() {
     doAll(api, authKey);
-    // multiItem(videos);
-    console.log(JSON.stringify(videos));
 }
 
 init()

@@ -68,7 +68,26 @@
         </ul>
     </noscript>
     <main class="index">
-        <!-- content inserted by script, its faster -->
+        <a class="yt-button" href="https://www.youtube.com/channel/UCtbivXmEZrr6aKtx3CjMMVg" rel="no-opener no-referrer"
+            target="_blank">
+            <span class="material-icons">play_arrow</span>
+        </a>
+        <div class="text">
+            <img src="./img/logo.png" alt="logo" width="476px" height="476px">
+            <h1>LIV3</h1>
+            <br />
+            <h2>Launchpad Performer / Artist / YouTuber</h2>
+        </div>
+        <div class="bio" data-aos="fade-up">
+            Hi, I'm 'LIV3'. Weird Name You May Ask, Well It All Started When I Owned My Launchpad Mini. My Original YT
+            Name Was Djspike And It Didn't Seem Launchpaddy Enough, So Myself And My Mate 'Axleton' Were Deciding On A
+            Name And Then I Came Across The Name 'LIV3'. You Might Not Get What Both Of Our Names Together Resemble...
+            Axleton + LIV3? You Get It Now.... If Not, Its Ableton Live. So Thats How My Name Became LIV3, Now About My
+            Channel. I Am Basically The Only New Zealand Launchpadder With A Youtube Channel, Thats Crazy! I Started
+            Making Launchpad Videos On The 14th Of September 2016, That Was With My Launchpad Mini. Now Its The Future
+            And My Channel Has Improved A Lot Over The Years That I Have Been Launchpadding For. Thanks To Everyone For
+            Your Support!
+        </div>
     </main>
     <footer>
         &copy; Hudson Curren & Caleb Kerr 2020
@@ -77,27 +96,15 @@
 </body>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-    AOS.init();
+    AOS.init({
+
+        delay: 0,
+        duration: 150,
+        easing: 'ease-out-cubic',
+        mirror: true
+    });
 </script>
 <!-- IMPORTING INIT SCRIPT -->
 <script src="script/app.js"></script>
-<script>
-    document.querySelector("main.index").innerHTML =
-        `
-        <a class="yt-button" href="https://www.youtube.com/channel/UCtbivXmEZrr6aKtx3CjMMVg" rel="no-opener no-referrer"
-                    target="_blank">
-                    <span class="material-icons">play_arrow</span>
-            </a>
-            <div class="text">
-                <img src="./img/logo.png" alt="logo" width="476px" height="476px">
-                <h1>LIV3</h1>
-                <br />
-                <h2>Launchpad Performer / Artist / YouTuber</h2>
-            </div>
-            <div class="bio" data-aos="fade-up">
-                Hi, I'm 'LIV3'. Weird Name You May Ask, Well It All Started When I Owned My Launchpad Mini. My Original YT Name Was Djspike And It Didn't Seem Launchpaddy Enough, So Myself And My Mate 'Axleton' Were Deciding On A Name And Then I Came Across The Name 'LIV3'. You Might Not Get What Both Of Our Names Together Resemble... Axleton + LIV3? You Get It Now.... If Not, Its Ableton Live. So Thats How My Name Became LIV3, Now About My Channel. I Am Basically The Only New Zealand Launchpadder With A Youtube Channel, Thats Crazy! I Started Making Launchpad Videos On The 14th Of September 2016, That Was With My Launchpad Mini. Now Its The Future And My Channel Has Improved A Lot Over The Years That I Have Been Launchpadding For. Thanks To Everyone For Your Support! 
-                </div>
-        `
-</script>
 
 </html>

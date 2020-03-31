@@ -86,7 +86,7 @@ main {
     }
 
     @media screen and (min-width: 1200px) {
-        padding: 50px 300px;
+        padding: 50px 250px;
     }
 
     &.faq {
@@ -101,11 +101,21 @@ main {
                 font-weight: lighter;
                 font-size: 96px;
                 letter-spacing: -1.5px;
+
+                @media screen and (max-width: 1200px) {
+                    font-size: 48px;
+                    text-align: center;
+                }
             }
 
             .subhero {
                 font-size: 34px;
                 letter-spacing: 0.25px;
+
+                @media screen and (max-width: 1200px) {
+                    text-align: center;
+                    font-size: 24px;
+                }
             }
         }
 
@@ -178,11 +188,21 @@ main {
                 font-weight: lighter;
                 font-size: 96px;
                 letter-spacing: -1.5px;
+
+                @media screen and (max-width: 1200px) {
+                    font-size: 48px;
+                    text-align: center;
+                }
             }
 
             .subhero {
                 font-size: 34px;
                 letter-spacing: 0.25px;
+
+                @media screen and (max-width: 1200px) {
+                    text-align: center;
+                    font-size: 24px;
+                }
             }
         }
 
@@ -194,7 +214,7 @@ main {
             grid-template-columns: 1fr 1fr 1fr;
 
             // tablets
-            @media screen and (max-width: 1100px) {
+            @media screen and (max-width: 1300px) {
                 grid-template-columns: 1fr 1fr;
             }
 
@@ -286,6 +306,23 @@ main {
             h1 {
                 font-size: 15vh;
                 filter: drop-shadow(0 0 2.5em black);
+
+                @media screen and (max-width: 1200px) {
+                    font-size: 48px
+                }
+            }
+
+            img {
+                @media screen and (max-width: 1200px) {
+                    width: 90%;
+                    height: auto;
+                    margin: 0 auto;
+
+                    @media only screen and (orientation: landscape) {
+                        width: 75%;
+                    }
+                }
+
             }
         }
 
