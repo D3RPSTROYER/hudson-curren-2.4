@@ -28,7 +28,7 @@ function makeItem(name, image, vidLink, dlLink, delay) {
 
     let res = `
         <div class="gallery" data-aos="fade-up" data-aos-delay="${delay}">
-            <div class="banner" style="background-image: url(./img/thumbnails/${image});">
+            <div class="banner" style="background-image: url("${image});">
             </div>
             <div class="desc">
             <div class="title">
