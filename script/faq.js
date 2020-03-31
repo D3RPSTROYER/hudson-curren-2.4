@@ -1,30 +1,22 @@
 const content = document.querySelector("div.content");
+const api = "https://api.jsonbin.io/b/5e828a4c22c81b0ffa4ed870/latest"
+const authKey = '$2b$10$0EaywmQ9k387XxShjAt.ouF7m0YLoSfHcBnMRMlaDHqSnflXwA.yq';
 
-const qs = [{
-    q: "Question",
-    a: "lorem ipsum dolor. sit amet",
-    d: 0
-}, {
-    q: "Question",
-    a: "lipsum",
-    d: 50
-}, {
-    q: "Question",
-    a: "lipsum",
-    d: 100
-}, {
-    q: "Question",
-    a: "lipsum",
-    d: 150
-}, {
-    q: "Question",
-    a: "lipsum",
-    d: 0
-}, {
-    q: "Question",
-    a: "lipsum",
-    d: 50
-}]
+function doAll(api, auth) {
+    let xhr = new XMLHttpRequest;
+    xhr.open("GET", api)
+    xhr.setRequestHeader('secret-key', auth);
+    xhr.send();
+
+    xhr.onload = () => {
+        if (xhr.status != 200) {
+            console.error(`Error: ${xhr.status}: ${xhr.statusText}`)
+        } else {
+            content.innerHTML = "";
+            multiPart(JSON.parse(xhr.responseText));
+        }
+    }
+}
 
 function generatePart(q, a, d) {
 
@@ -67,7 +59,7 @@ function multiPart(a) {
 }
 
 function init() {
-    multiPart(qs);
+    doAll(api, authKey);
 }
 
 init();
