@@ -409,6 +409,7 @@ main.index .text h1 {
 }
 
 main.index .bio {
+  min-height: 40vh;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
