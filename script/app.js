@@ -45,12 +45,12 @@ function toggleNav() {
         nav.style.width = navWidth;
         navButton.innerHTML = "close";
         navOpen = true;
-
+        document.body.classList.add("no-scroll");
     } else {
         nav.style.width = "0px";
         navButton.innerHTML = "menu";
         navOpen = false;
-
+        document.body.classList.remove("no-scroll");
     }
 }
 
@@ -58,6 +58,7 @@ function resetNav() {
     nav.style.width = "0px";
     nav.classList.remove("shadow");
     navOpen = false;
+    document.body.classList.remove("no-scroll");
 }
 
 // this looks neat now, yay
