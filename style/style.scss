@@ -53,9 +53,13 @@ nav {
         position: absolute;
         flex-direction: row;
         left: 10px;
-        bottom: 10px;
+        bottom: 20px;
         display: flex;
         justify-content: left;
+
+        @media screen and (max-width:900px) {
+            justify-content: center;
+        }
 
         a {
             text-decoration: none;

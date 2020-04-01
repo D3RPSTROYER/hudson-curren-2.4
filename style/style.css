@@ -61,13 +61,21 @@ nav .social-media {
       -ms-flex-direction: row;
           flex-direction: row;
   left: 10px;
-  bottom: 10px;
+  bottom: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
+}
+
+@media screen and (max-width: 900px) {
+  nav .social-media {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 nav .social-media a {
