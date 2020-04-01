@@ -473,54 +473,44 @@ footer {
 }
 
 main.privacy {
-    word-wrap: normal;
-}
+    font-family: "Roboto", sans-serif;
 
-[data-custom-class='body'],
-[data-custom-class='body'] * {
-    background: transparent !important;
-}
+    a {
+        color: #ddd;
+        word-wrap: none;
 
-[data-custom-class='title'],
-[data-custom-class='title'] * {
-    font-size: 60px !important;
-    letter-spacing: -0.5px;
-    color: #fff !important;
-}
+        &:visited {
+            color: #ccc;
+        }
+    }
 
-[data-custom-class='subtitle'],
-[data-custom-class='subtitle'] * {
-    color: #595959 !important;
-    font-size: 16px !important;
-    letter-spacing: 0.15px;
-}
+    h1 {
+        font-size: 48px;
+        letter-spacing: 0;
+        font-weight: normal;
+    }
 
-[data-custom-class='heading_1'],
-[data-custom-class='heading_1'] * {
-    font-size: 48px !important;
-    color: #fff !important;
-    letter-spacing: 0px;
-}
+    h2 {
+        font-size: 34px;
+        letter-spacing: 0.25px;
+        font-weight: normal;
+        margin-top: 15px;
+    }
 
-[data-custom-class='heading_2'],
-[data-custom-class='heading_2'] * {
-    font-size: 34px !important;
-    color: #fff !important;
-    letter-spacing: 0.25px;
-}
+    h3 {
+        font-size: 24px;
+        letter-spacing: 0;
+        font-weight: normal;
+        margin-top: 5px;
+        margin-bottom: 40px;
+    }
 
-[data-custom-class='body_text'],
-[data-custom-class='body_text'] * {
-    color: #dfdfdf !important;
-    font-size: 16px !important;
-    letter-spacing: 0.5px;
-}
-
-[data-custom-class='link'],
-[data-custom-class='link'] * {
-    color: #ddd !important;
-    font-size: 14px !important;
-    letter-spacing: 1.25px;
-    word-break: break-word !important;
-    font-weight: medium;
+    p {
+        font-size: 16px;
+        letter-spacing: 0.25px;
+        color: #ddd;
+        font-weight: normal;
+        margin-top: 5px;
+        margin-left: 35px;
+    }
 }
