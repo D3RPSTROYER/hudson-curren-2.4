@@ -108,7 +108,42 @@
     </nav>
 
     <main class="contact">
-        <center>under construction</center>
+        <div class="title">
+            <div class="hero">
+                Contact
+            </div>
+            <div class="subhero">
+                Contact me here.
+            </div>
+        </div>
+        <div class="content">
+            <div class="textarea">
+                <textarea class="form-container" placeholder="Message..." name="message"></textarea>
+            </div>
+            <div class="right">
+                <div class="name-field">
+                    <div class="form-container">
+                        <input type="text" name="name" class="name-field" required />
+                        <label for="name">
+                            <span>Name</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="email-field">
+                    <div class="form-container">
+                        <input type="text" name="email" class="email-field" required />
+                        <label for="email">
+                            <span>E-mail</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="send-button">
+                    <button type="submit" class="submit-button" onclick="submit()">
+                        SUBMIT!
+                    </button>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
         &copy; Hudson Curren & Caleb Kerr 2020<br>
@@ -127,5 +162,6 @@
 </script>
 <!-- IMPORTING INIT SCRIPT -->
 <script src="script/app.js"></script>
+<script src="script/contact.js"></script>
 
 </html>

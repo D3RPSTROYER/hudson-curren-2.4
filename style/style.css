@@ -178,6 +178,210 @@ main {
   }
 }
 
+main.contact .title {
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 45vh;
+}
+
+main.contact .title .hero {
+  font-weight: lighter;
+  font-size: 96px;
+  letter-spacing: -1.5px;
+}
+
+@media screen and (max-width: 1200px) {
+  main.contact .title .hero {
+    font-size: 48px;
+    text-align: center;
+  }
+}
+
+main.contact .title .subhero {
+  font-size: 34px;
+  letter-spacing: 0.25px;
+}
+
+@media screen and (max-width: 1200px) {
+  main.contact .title .subhero {
+    text-align: center;
+    font-size: 24px;
+  }
+}
+
+main.contact .content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr;
+      grid-template-columns: 2fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  width: 100%;
+  height: 100vh;
+}
+
+@media screen and (min-width: 900px) and (orientation: landscape) {
+  main.contact .content {
+    height: 40vh;
+  }
+}
+
+main.contact .content .textarea {
+  -ms-grid-row: 1;
+  grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 /span 2;
+}
+
+@media screen and (min-width: 1900px) and (orientation: landscape) {
+  main.contact .content .textarea {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1 /span 2;
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
+}
+
+main.contact .content .textarea textarea {
+  width: 100%;
+  height: 100%;
+  color: white;
+  background-color: #222;
+  border-right: #333;
+  border-bottom: #333;
+  padding: 10px;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+  resize: none;
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: 0.5;
+}
+
+main.contact .content .right {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 /span 2;
+  -ms-grid-column: 2;
+  grid-column: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  text-align: center;
+  padding: 10px;
+}
+
+main.contact .content .right .email-field,
+main.contact .content .right .name-field {
+  width: 100%;
+  height: 100%;
+}
+
+main.contact .content .right .email-field .form-container,
+main.contact .content .right .name-field .form-container {
+  font-size: 16px;
+  margin: 0 auto;
+  width: 75%;
+  position: relative;
+  height: 50px;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+main.contact .content .right .email-field .form-container input,
+main.contact .content .right .name-field .form-container input {
+  width: 100%;
+  height: 100%;
+  color: white;
+  padding-top: 20px;
+  border: none;
+  background-color: transparent;
+}
+
+main.contact .content .right .email-field .form-container input:focus + label span,
+main.contact .content .right .email-field .form-container input:valid + label span,
+main.contact .content .right .name-field .form-container input:focus + label span,
+main.contact .content .right .name-field .form-container input:valid + label span {
+  -webkit-transform: translateY(-150%);
+  transform: translateY(-150%);
+  font-size: 12px;
+  color: #fff;
+}
+
+main.contact .content .right .email-field .form-container input:focus + label::after,
+main.contact .content .right .email-field .form-container input:valid + label::after,
+main.contact .content .right .name-field .form-container input:focus + label::after,
+main.contact .content .right .name-field .form-container input:valid + label::after {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+}
+
+main.contact .content .right .email-field .form-container label,
+main.contact .content .right .name-field .form-container label {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid #333;
+  outline: none;
+}
+
+main.contact .content .right .email-field .form-container label::after,
+main.contact .content .right .name-field .form-container label::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: -1px;
+  height: 100%;
+  width: 100%;
+  border-bottom: 3px solid #fff;
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+main.contact .content .right .email-field .form-container label span,
+main.contact .content .right .name-field .form-container label span {
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+main.contact .content .right button {
+  width: 50%;
+  height: 50px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  background-color: #222;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
 main.faq .title {
   text-align: left;
   display: -webkit-box;
