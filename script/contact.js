@@ -11,11 +11,32 @@ var Message = {
 var message, name, email;
 
 function submit() {
-    message = textarea.value;
-    name = nameField.value;
-    email = emailField.value;
-    Message.name = name;
-    Message.email = email;
-    Message.message = message;
-    console.log(Message);
+    if (allFilledOut()) {
+        message = textarea.value;
+        name = nameField.value;
+        email = emailField.value;
+        Message.name = name;
+        Message.email = email;
+        Message.message = message;
+        console.log(Message);
+    } else {
+        alert(
+            ```
+            be sure that you have filled all fields before hitting submit.
+            any non-full fields will result in your message not being sent.
+            ```);
+    }
+}
+
+function allFilledOut() {
+    if (textarea.value == "") {
+        return false;
+    }
+    if (nameField.value == "") {
+        return false;
+    }
+    if (emailField.value == "") {
+        return false;
+    }
+    return true;
 }
