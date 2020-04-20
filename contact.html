@@ -118,12 +118,12 @@
         </div>
         <div class="content">
             <div class="textarea">
-                <textarea class="form-container" placeholder="Message..." name="message"></textarea>
+                <textarea class="form-container" placeholder="Message..." name="message" required></textarea>
             </div>
             <div class="right">
                 <div class="name-field">
                     <div class="form-container">
-                        <input type="text" name="name" class="name-field" required />
+                        <input type="text" name="name" class="name-field-" required />
                         <label for="name">
                             <span>Name</span>
                         </label>
@@ -131,14 +131,14 @@
                 </div>
                 <div class="email-field">
                     <div class="form-container">
-                        <input type="text" name="email" class="email-field" required />
+                        <input type="text" name="email" class="email-field-" required />
                         <label for="email">
                             <span>E-mail</span>
                         </label>
                     </div>
                 </div>
                 <div class="send-button">
-                    <button type="submit" class="submit-button" onclick="submit()">
+                    <button type="submit" class="submit-button">
                         SUBMIT!
                     </button>
                 </div>
