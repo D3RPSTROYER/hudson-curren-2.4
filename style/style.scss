@@ -35,12 +35,10 @@ body {
     -moz-user-select: none;
 
     @media screen and (min-width: 900px) {
-        padding: 50px 10px;
         background-image: url("../img/mobile-bg.gif");
     }
 
     @media screen and (min-width: 1200px) {
-        padding: 50px 250px;
         background-image: url('../img/bg.gif');
     }
 
@@ -145,6 +143,15 @@ main {
     min-height: 100vh;
     padding: 50px 0;
     overflow-y: scroll;
+    background: transparent;
+
+    @media screen and (min-width: 900px) {
+        padding: 50px 10px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding: 50px 250px;
+    }
 
     &.contact {
         .title {
@@ -520,7 +527,7 @@ main {
         }
 
         .text {
-            text-align: center;
+            text-align: left;
             margin: auto;
             display: flex;
             flex-direction: column;
