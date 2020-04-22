@@ -24,7 +24,7 @@ body {
     opacity: 1;
     background-image: url('../img/index-bg.gif');
     background-size: 100%;
-    background-repeat: repeat-y;
+    background-repeat: no-repeat;
     background-attachment: fixed;
     user-select: none;
     -moz-user-select: none;
@@ -132,10 +132,6 @@ nav {
 
 main {
     min-height: 100vh;
-    background-image: url("../img/bg.gif");
-    background-size: contain;
-    background-repeat: repeat-y;
-    background-position: center;
     padding: 50px 0;
 
     @media screen and (min-width: 900px) {

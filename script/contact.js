@@ -37,10 +37,10 @@ function allFilledOut() {
     if (!textarea.validity.valid) {
         return false;
     }
-    if (!nameField.validity.valid) {
+    else if (!nameField.validity.valid) {
         return false;
     }
-    if (!emailField.validity.valid) {
+    else if (!emailField.validity.valid) {
         return false;
     } else {
         return true;
