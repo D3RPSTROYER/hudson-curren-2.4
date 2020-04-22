@@ -34,6 +34,16 @@ body {
     -webkit-user-drag: none;
     -moz-user-select: none;
 
+    @media screen and (min-width: 900px) {
+        padding: 50px 10px;
+        background-image: url("../img/mobile-bg.gif");
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding: 50px 250px;
+        background-image: url('../img/bg.gif');
+    }
+
     @media print {
         display: none;
     }
@@ -135,16 +145,6 @@ main {
     min-height: 100vh;
     padding: 50px 0;
     overflow-y: scroll;
-
-    @media screen and (min-width: 900px) {
-        padding: 50px 10px;
-        background-image: url("../img/mobile-bg.gif");
-    }
-
-    @media screen and (min-width: 1200px) {
-        padding: 50px 250px;
-        background-image: url('../img/bg.gif');
-    }
 
     &.contact {
         .title {
