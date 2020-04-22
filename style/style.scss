@@ -25,6 +25,7 @@ body {
     background-image: url('../img/index-bg.gif');
     background-size: 100%;
     background-repeat: no-repeat;
+    background-position: center;
     background-attachment: fixed;
     user-select: none;
     -moz-user-select: none;
@@ -133,6 +134,7 @@ nav {
 main {
     min-height: 100vh;
     padding: 50px 0;
+    overflow-y: scroll;
 
     @media screen and (min-width: 900px) {
         padding: 50px 10px;

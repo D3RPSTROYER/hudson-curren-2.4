@@ -22,6 +22,7 @@ body {
   background-image: url("../img/index-bg.gif");
   background-size: 100%;
   background-repeat: no-repeat;
+  background-position: center;
   background-attachment: fixed;
   -ms-user-select: none;
       user-select: none;
@@ -158,6 +159,7 @@ nav .nav-list li a span {
 main {
   min-height: 100vh;
   padding: 50px 0;
+  overflow-y: scroll;
 }
 
 @media screen and (min-width: 900px) {
