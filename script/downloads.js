@@ -17,7 +17,7 @@ function doAll(api, auth) {
     xhr.onload = () => {
         if (xhr.status != 200) {
             console.error(`Error: ${xhr.status}: ${xhr.statusText}`)
-            content.innerHTML = `<div></div><center>${xhr.status}: ${xhr.statusText}</center`;
+            content.innerHTML = `<div></div><center>${xhr.status}: ${xhr.statusText}</center>`;
         } else {
             content.innerHTML = "";
             console.log(`Status: ${xhr.status}: ${xhr.statusText}`);
