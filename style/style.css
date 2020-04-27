@@ -714,7 +714,7 @@ main.index .bio {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  text-align: center;
+  text-align: left;
 }
 
 @media screen and (max-width: 1100px) {
