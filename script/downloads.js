@@ -1,6 +1,7 @@
 const content = document.querySelector('div.content');
-const api = 'https://api.jsonbin.io/b/5e815c50862c46101ac086a6/latest';
-const authKey = '$2b$10$0EaywmQ9k387XxShjAt.ouF7m0YLoSfHcBnMRMlaDHqSnflXwA.yq';
+const api = "http://127.0.0.1:5000"
+// const api = 'https://api.jsonbin.io/b/5e815c50862c46101ac086a6/latest';
+// const authKey = '$2b$10$0EaywmQ9k387XxShjAt.ouF7m0YLoSfHcBnMRMlaDHqSnflXwA.yq';
 
 // JSONBin will be replaced with mySQL in the database 2.3 in term 3/4
 // for now it works better and i can use JS
@@ -8,10 +9,10 @@ const authKey = '$2b$10$0EaywmQ9k387XxShjAt.ouF7m0YLoSfHcBnMRMlaDHqSnflXwA.yq';
 // by making the client do the hard work you save server money and power. 
 // which can be used to server the site faster or accept requests in higher volume
 
-function doAll(api, auth) {
+function doAll(api) {
     let xhr = new XMLHttpRequest;
-    xhr.open("GET", api)
-    xhr.setRequestHeader('secret-key', auth);
+    xhr.open("GET", `${api}/api/v1/videos`)
+//    xhr.setRequestHeader('secret-key', auth);
     xhr.send();
 
     xhr.onload = () => {
@@ -52,7 +53,7 @@ function multiItem(array) {
 }
 
 function init() {
-    doAll(api, authKey);
+    doAll(api);
 }
 
 init()

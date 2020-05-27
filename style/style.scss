@@ -530,7 +530,7 @@ main {
         }
 
         .text {
-            text-align: left;
+            text-align: center;
             margin: auto;
             display: flex;
             flex-direction: column;
@@ -539,6 +539,7 @@ main {
 
             h1 {
                 font-size: 15vh;
+                text-align: center;
                 filter: drop-shadow(0 0 2.5em black);
 
                 @media screen and (max-width: 1200px) {

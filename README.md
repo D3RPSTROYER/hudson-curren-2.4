@@ -6,3 +6,5 @@ My NCEA 2.4 Internal Assesment for the [Liv3 Youtube Channel](https://www.youtub
 
 i didn't make it secure at all. but thats OK
 i didn't need to make the in the first place
+i will change it to link to a mySQL server
+because i can.
