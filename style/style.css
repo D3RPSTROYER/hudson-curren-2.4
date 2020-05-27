@@ -504,6 +504,10 @@ main.faq .content .qa .a .title {
   width: 100%;
 }
 
+main.downloads {
+  overflow-y: hidden;
+}
+
 main.downloads .title {
   text-align: left;
   display: -webkit-box;

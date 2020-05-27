@@ -411,6 +411,7 @@ main {
     }
 
     &.downloads {
+        overflow-y: hidden;
         .title {
             text-align: left;
             display: flex;
