@@ -1,11 +1,10 @@
 const content = document.querySelector("div.content");
-const api = "https://api.jsonbin.io/b/5e828a4c22c81b0ffa4ed870/latest"
-const authKey = '$2b$10$0EaywmQ9k387XxShjAt.ouF7m0YLoSfHcBnMRMlaDHqSnflXwA.yq';
+const api = "http://127.0.0.1:5000"
+// const authKey = '$2b$10$0EaywmQ9k387XxShjAt.ouF7m0YLoSfHcBnMRMlaDHqSnflXwA.yq';
 
-function doAll(api, auth) {
+function doAll(api) {
     let xhr = new XMLHttpRequest;
-    xhr.open("GET", api)
-    xhr.setRequestHeader('secret-key', auth);
+    xhr.open("GET", `${api}/api/faq`)
     xhr.send();
 
     xhr.onload = () => {
@@ -60,7 +59,7 @@ function multiPart(a) {
 }
 
 function init() {
-    doAll(api, authKey);
+    doAll(api);
 }
 
 init();

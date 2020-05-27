@@ -11,7 +11,7 @@ const api = "http://127.0.0.1:5000"
 
 function doAll(api) {
     let xhr = new XMLHttpRequest;
-    xhr.open("GET", `${api}/api/v1/videos`)
+    xhr.open("GET", `${api}/api/videos`)
 //    xhr.setRequestHeader('secret-key', auth);
     xhr.send();
 
