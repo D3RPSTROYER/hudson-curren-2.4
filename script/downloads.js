@@ -1,5 +1,5 @@
 const content = document.querySelector('div.content');
-const api = "http://127.0.0.1:5000"
+const api = "/api/videos"
 // const api = 'https://api.jsonbin.io/b/5e815c50862c46101ac086a6/latest';
 // const authKey = '$2b$10$0EaywmQ9k387XxShjAt.ouF7m0YLoSfHcBnMRMlaDHqSnflXwA.yq';
 
@@ -11,7 +11,7 @@ const api = "http://127.0.0.1:5000"
 
 function doAll(api) {
     let xhr = new XMLHttpRequest;
-    xhr.open("GET", `${api}/api/videos`)
+    xhr.open("GET", api)
 //    xhr.setRequestHeader('secret-key', auth);
     xhr.send();
 

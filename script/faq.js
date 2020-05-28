@@ -1,10 +1,10 @@
 const content = document.querySelector("div.content");
-const api = "http://127.0.0.1:5000"
+const api = "/api/faq"
 // const authKey = '$2b$10$0EaywmQ9k387XxShjAt.ouF7m0YLoSfHcBnMRMlaDHqSnflXwA.yq';
 
 function doAll(api) {
     let xhr = new XMLHttpRequest;
-    xhr.open("GET", `${api}/api/faq`)
+    xhr.open("GET", api)
     xhr.send();
 
     xhr.onload = () => {
