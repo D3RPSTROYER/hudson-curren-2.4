@@ -1,10 +1,11 @@
 const content = document.querySelector("div.content");
-const api = "/api/faq"
-// const authKey = '$2b$10$0EaywmQ9k387XxShjAt.ouF7m0YLoSfHcBnMRMlaDHqSnflXwA.yq';
+const api = "https://api.jsonbin.io/b/5e828a4c22c81b0ffa4ed870/latest"
+const authKey = '$2b$10$0EaywmQ9k387XxShjAt.ouF7m0YLoSfHcBnMRMlaDHqSnflXwA.yq';
 
 function doAll(api) {
     let xhr = new XMLHttpRequest;
     xhr.open("GET", api)
+    xhr.setRequestHeader('secret-key', authKey);
     xhr.send();
 
     xhr.onload = () => {
