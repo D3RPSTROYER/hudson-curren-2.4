@@ -20,7 +20,6 @@ function doAll(api) {
             console.error(`Error: ${xhr.status}: ${xhr.statusText}`)
             content.innerHTML = `<div></div><center>${xhr.status}: ${xhr.statusText}</center>`;
         } else {
-            content.innerHTML = "";
             console.log(`Status: ${xhr.status}: ${xhr.statusText}`);
             multiItem(JSON.parse(xhr.responseText));
         }
@@ -29,7 +28,7 @@ function doAll(api) {
 
 function makeItem(name, img, vidLink, dlLink, delay) {
 
-    let res = `
+    return `
         <div class="gallery" data-aos="fade-up" data-aos-delay="${delay}">
             <div class="banner" style="background-image: url('${img}');">
             </div>
@@ -42,11 +41,10 @@ function makeItem(name, img, vidLink, dlLink, delay) {
                 </div>
             </div>
         </div>`
-
-    return res
 }
 
 function multiItem(array) {
+    content.innerHTML = "";
     array.forEach(element => {
         content.innerHTML += makeItem(element.name, element.img, element.vidLink, element.dlLink, element.delay)
     });
